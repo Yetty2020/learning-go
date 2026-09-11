@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func main() {
+	//using the walrus operator to declare and assign a varible
+	messageStart := "You are learning GO!"
+	fmt.Println(messageStart)
+
 	//setting different variable types
 	var name string
 	name = "Fatihah"
