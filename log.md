@@ -1,5 +1,21 @@
 ## Daily learning diary
 
+## Day 3 - 09/10/25
+- Go - Ch02 - Lesson 1 to 
+
+Learned
+- Learnt how to constants and how they are declared in Go.
+- Constants are declared with the const keyword and the walrus operator is not needed.
+- Values declared as contants cannot be changed when initally declared.
+- const pi = 3.14
+- Leant that constants must be known at compile time. They cannot be computed at runtime like Javascript.
+- For example, if you see the Time.now() function, the value can only be computed at runtime.
+- This cannot be declared as a constant in Go.
+- Go is faster and lightweight than interpreted languages like python, javascript, Ruby, PHP.
+- However, in terms of execution speed, Go is much slower than other compiled languages like C and Rust.
+- This is due to the Go runtime that is used for memory management
+
+
 ## Day 2 - 07/10/2026
 - Go - Ch01 - Lesson 5 to 14.
 
@@ -27,6 +43,9 @@ Learned
 - Go programs are fairly lightweight. 
 - Every Go program has a small amount of extra code that is included in the executable binary code called Go Runtime.
 - The purpose is to clean up unused memory at runtime.
+- learnt different string formatting in Go:
+- print, printf, println and sprintf
+- The rule of thumb is use Println for quick output and debugging, and Printf when you need control (decimals, exact layout). Use Sprintf when you need the string in a variable.
 
 
 
