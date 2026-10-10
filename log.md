@@ -15,6 +15,37 @@ Learned
 - Even emojis in Go counts as 1 rune
 
 
+- Learnt about conditionals in Go
+- It works the same way in Ts, just that you do not use parenthesis around the conditions
+- Also, the curly braces has to be declared on the same line as the condition and not a new line
+- if, else and else if are supported
+- To make your code shorter and more concise, when declaring initial statements in conditionals, you declare it on a single line
+- This is the syntax
+- if length := getLength(email); length < 10 
+- The semicolon ; separates “do this first” from “then check this condition”.
+
+- Switch statement
+- This is used when you want to compare a value against multiple options
+- It is similar to the one in TS, unless that you do not need to add a break statement, Go knows when to break it self
+- This is the syntax
+switch plan {
+case "basic":
+	cost = 10.0
+case "pro":
+	cost = 20.0
+default:
+	cost = 0.0
+}
+
+- Wrote a function to calculate balanance using conditons
+
+
+Struggled
+- I had in deciding whether to use if and else if statments or switch statements
+- 
+
+
+
 
 ## Day 3 - 09/10/25
 - Go - Ch02 - Lesson 1 to 4
