@@ -3,7 +3,9 @@
 Daily exercises and small projects carried out
 
 ## Progress 
-- [] Chapter1_Variables
+- [X] Chapter1_Variables
+- [X] Chapter2_Constants
+- [] Chapter3_Conditions
 
 
 ## Mini Tools
