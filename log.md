@@ -1,7 +1,23 @@
 ## Daily learning diary
 
+## Day 4 - 10/10/25
+- Go - Ch02 - Lesson 5 to 9
+
+Learned
+- Learnt about Runes in Go
+- Computers store texts as bytes. 
+- Simple english letters need 1 byte
+- Other characters like emojis might need more that 1 byte
+- The way of storing text is UTF-8 and Go uses this
+- A rune is Go name for one character
+- To find the number of runes in a string = utf8.RuneCountInString(string)
+- For example, the word "boot",has 4 runes
+- Even emojis in Go counts as 1 rune
+
+
+
 ## Day 3 - 09/10/25
-- Go - Ch02 - Lesson 1 to 
+- Go - Ch02 - Lesson 1 to 4
 
 Learned
 - Learnt how to constants and how they are declared in Go.
