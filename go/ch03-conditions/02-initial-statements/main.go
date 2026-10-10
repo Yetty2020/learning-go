@@ -11,7 +11,7 @@ func main(){
 // }
 // fmt.Println(length) // ✅ still works here, even though you don't need it
 
-
+//Use this because it makes the code shorter and cleaner.
 
 // Initial statement: length only lives inside the if/else
 // if length := getLength(email); length < 10 {
