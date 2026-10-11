@@ -1,19 +1,24 @@
 package main
 
+func getMonthlyPriceIfElse(tier string) int{
+	// writing the conditional statement using if and else if
+
+	if tier == "basic"{
+		return (100 * 100)
+	} else if tier == "premium"{
+		return  (150 * 100)
+	} else if tier == "enterprise"{
+		return (500 * 100)
+
+	} else{
+		return 0
+	}
+
+}
+
 func getMonthlyPrice(tier string) int {
 	// ?
-// writing the conditional statement using if and else if
 
-	// if tier == "basic"{
-	// 	return (100 * 100)
-	// } else if tier == "premium"{
-	// 	return  (150 * 100)
-	// } else if tier == "enterprise"{
-	// 	return (500 * 100)
-
-	// } else{
-	// 	return 0
-	// }
 
 	// writing a switch statement
 	switch tier{
