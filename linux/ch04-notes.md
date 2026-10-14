@@ -66,3 +66,17 @@ Commands:
 
 Gotcha: with `<`, the program never sees the filename, only the contents
 
+
+## Piping
+What it is: `|` sends one program's stdout into the next program's stdin
+Commands:
+- `cmd1 | cmd2` → pipe output into another command
+- `grep -R "text" dir` → search all files in a folder recursively
+- `--exclude-dir="name"` → skip folders with that name
+- `... | wc -l` → count matching lines
+- `cut -d, -f2 file | sort | uniq -c` → count occurrences per value
+Tried in my sandbox:
+- Bob count with exclude = 100, without = 150 (backups double-counted)
+Gotcha: forgetting --exclude-dir counts duplicates. Check what folders you're searching
+Pipe vs redirect: `>` sends output to a file, `|` sends it to a program
+
