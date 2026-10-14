@@ -8,15 +8,28 @@ Commands:
 - use man grep in mac instead of grep -help
 
 ## Flags
-**What it is:** options that change how a command behaves
-**Conventions:**
+What it is: options that change how a command behaves
+Conventions:
 - single letter → one dash: `-a`
 - word → two dashes: `--help`
 - combine single-letter flags: `ls -al` = `ls -a -l`
-**Commands:**
+Commands:
 - `ls -l` → long listing
 - `ls -a` → show hidden files
 - `wc -c file` → byte count
 - `wc -l file` → line count
 - `wc -w file` → word count
-**Gotcha:** `-c` counts bytes, `-m` counts characters (same as Go's len() vs RuneCount)
+Gotcha: `-c` counts bytes, `-m` counts characters (same as Go's len() vs RuneCount)
+
+
+## Positional Arguments
+What it is: inputs to a command, where ORDER matters (like function arguments)
+Commands:
+- `cd /path` → 1 argument
+- `mv FROM TO` → 2 arguments: move or rename
+- `mv file.txt folder/` → move, keep the same name
+- `mv old.txt new.txt` → rename
+- `mv -i FROM TO` → ask before overwriting
+Tried in my sandbox:
+- moved key.txt from public/ to private/ and checked with ls
+Gotcha: mv overwrites existing files silently. A typo in the destination name renames the file.
