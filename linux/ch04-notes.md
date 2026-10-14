@@ -46,3 +46,13 @@ Tried in my sandbox:
 - warn.sh with env vars → exit code 0
 Gotcha: $? changes after every command, so check it immediately
 Go link: os.Exit(1) in my CLI tools sets the exit code
+
+## Standard Error
+What it is: a second output stream just for errors (stdout = 1, stderr = 2)
+Commands:
+- `cmd > file` → stdout to file
+- `cmd 2> file` → stderr to file
+- `cmd > out 2> err` → split them
+- `cmd > all 2>&1` → both to one file
+- `cmd 2> /dev/null` → discard errors
+- `echo "msg" >&2` → (in a script) print to stderr
