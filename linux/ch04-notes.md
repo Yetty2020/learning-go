@@ -33,3 +33,16 @@ Commands:
 Tried in my sandbox:
 - moved key.txt from public/ to private/ and checked with ls
 Gotcha: mv overwrites existing files silently. A typo in the destination name renames the file.
+
+## Exit Codes
+What it is: a number a program returns when it finishes. 0 = success, anything else = error (usually 1)
+Commands:
+- `echo $?` → exit code of the LAST command
+- `cmd1 ; cmd2` → always run both
+- `cmd1 && cmd2` → run cmd2 only if cmd1 succeeded
+- `cmd1 || cmd2` → run cmd2 only if cmd1 failed
+Tried in my sandbox:
+- warn.sh without env vars → exit code 1
+- warn.sh with env vars → exit code 0
+Gotcha: $? changes after every command, so check it immediately
+Go link: os.Exit(1) in my CLI tools sets the exit code
