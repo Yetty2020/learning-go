@@ -56,3 +56,13 @@ Commands:
 - `cmd > all 2>&1` → both to one file
 - `cmd 2> /dev/null` → discard errors
 - `echo "msg" >&2` → (in a script) print to stderr
+
+## Standard Input
+What it is: the stream a program reads input from (keyboard by default). stdin = 0
+Commands:
+- `read -r var` → (in a script) read one line from stdin into var
+- `program < file.txt` → feed a file into the program's stdin
+- `wc file` vs `wc < file` → argument (program opens the file) vs stdin (shell feeds the data)
+
+Gotcha: with `<`, the program never sees the filename, only the contents
+
