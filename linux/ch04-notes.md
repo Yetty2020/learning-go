@@ -80,3 +80,19 @@ Tried in my sandbox:
 Gotcha: forgetting --exclude-dir counts duplicates. Check what folders you're searching
 Pipe vs redirect: `>` sends output to a file, `|` sends it to a program
 
+## Unix Philosophy
+1. Do one thing and do it well (grep searches, wc counts, sort sorts)
+2. Make programs work together (combine them with pipes)
+3. Use text streams as the universal interface (everything reads/writes text)
+
+When you build your projects, follow these so they work nicely with pipes:
+
+Print results to stdout and errors to stderr.
+Return exit code 0 on success and 1 on failure.
+Print plain text (one result per line), so other tools can grep, sort or count it.
+Later, accept input from stdin too, so you can do cat data.txt | yourtool.
+
+**Why it matters:** small focused tools + a shared format = you can combine them in ways nobody planned
+**In my Go code:** small single-purpose functions, logic separate from main, stdout for results, stderr for errors, exit codes
+**System design link:** microservices = the same idea at a bigger scale
+
