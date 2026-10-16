@@ -53,3 +53,13 @@ Gotchas:
 - a relative target is resolved from the LINK's folder, not where I ran ln
 - deleting the target breaks the link
 - absolute target: the link can move; relative target: link + target can move together
+
+## top
+What it is: live view of which processes use the most CPU/memory (like Activity Monitor)
+Commands:
+- `top` → start (sorted by CPU)
+- `top -o mem` → start sorted by memory (macOS)
+- inside top (macOS): `o` then `mem`/`cpu` to sort, `q` to quit
+- inside top (Linux): `M` memory, `P` CPU, `q` quit
+Key columns: PID, COMMAND, %CPU, MEM, TIME, STATE
+Gotcha: narrow windows hide columns, so widen it and restart top
