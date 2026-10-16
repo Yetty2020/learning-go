@@ -63,3 +63,13 @@ Commands:
 - inside top (Linux): `M` memory, `P` CPU, `q` quit
 Key columns: PID, COMMAND, %CPU, MEM, TIME, STATE
 Gotcha: narrow windows hide columns, so widen it and restart top
+
+## Interrupt
+What it is: stopping a running program
+Commands:
+- `Ctrl+C` → sends SIGINT (interrupt), most programs stop
+- `echo $?` after Ctrl+C → usually 130
+Use it when: a command hangs, has a typo, loops forever, or takes too long
+Did: read malicious.sh with cat first, ran it, stopped it with Ctrl+C
+Habit: always `cat` an unknown script before running it
+
