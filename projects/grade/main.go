@@ -1,5 +1,8 @@
 package main
 
+import ("fmt"
+ "os")
+
 func getGrade(score int) (string, bool) {
 
 	if score < 0 || score > 100 {
@@ -25,5 +28,15 @@ func getGrade(score int) (string, bool) {
 }
 
 func main() {
+
+	length := len(os.Args)
+	
+	if length == 1 {
+		fmt.Fprintln(os.Stderr, "usage: grade <score>")
+		os.Exit(1)
+	}
+	
+
+	fmt.Println(os.Args[1])
 
 }
