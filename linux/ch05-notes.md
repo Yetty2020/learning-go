@@ -22,3 +22,14 @@ Gotchas:
 - always keep `$PATH:` (or you replace your whole PATH)
 - use double quotes so $PATH expands, not single quotes
 - use an absolute path ($HOME/...), not a relative one
+
+## Shell Aliases
+What it is: a shortcut name for a command
+Commands:
+- `alias ll="ls -la"` → create (temporary, this session only)
+- `alias` → list all aliases
+- `alias ll` → show one alias
+- `unalias ll` → remove it
+- put the alias line in ~/.zshrc → permanent
+My aliases: `reload` (source ~/.zshrc), `gsave` (git add + commit)
+Gotcha: zsh shows aliases as `name='cmd'`, bash as `alias name='cmd'`
