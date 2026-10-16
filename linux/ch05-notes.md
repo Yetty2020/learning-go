@@ -73,3 +73,12 @@ Use it when: a command hangs, has a typo, loops forever, or takes too long
 Did: read malicious.sh with cat first, ran it, stopped it with Ctrl+C
 Habit: always `cat` an unknown script before running it
 
+## Kill
+What it is: stopping a process from another terminal using its PID
+Commands:
+- `ps aux` → list all processes (USER, PID, ..., COMMAND)
+- `ps aux | grep name` → find a specific process (ignore the grep line itself!)
+- `kill PID` → send SIGTERM (polite stop)
+- `kill -9 PID` → SIGKILL, can't be ignored (last resort, no cleanup)
+- `pgrep -f name` / `pkill -f name` → find / kill by name
+
