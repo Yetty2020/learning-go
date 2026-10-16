@@ -42,3 +42,14 @@ Commands:
 - `Space` next page, `b` back, `G` end, `g` start
 Tip: search for the flag (`/-r`) or jump to `/EXAMPLES`
 Gotcha: macOS man pages are BSD versions and can differ from Linux
+
+## Symbolic Links
+What it is: a shortcut file that points to another file or folder (not a copy)
+Commands:
+- `ln -s TARGET LINK` → create a symlink (target first!)
+- `ls -l` → shows `link -> target`, and the line starts with `l`
+Did: moved tbills.txt to investments/, left a symlink in credit_cards/
+Gotchas:
+- a relative target is resolved from the LINK's folder, not where I ran ln
+- deleting the target breaks the link
+- absolute target: the link can move; relative target: link + target can move together
