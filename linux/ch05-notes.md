@@ -33,3 +33,12 @@ Commands:
 - put the alias line in ~/.zshrc → permanent
 My aliases: `reload` (source ~/.zshrc), `gsave` (git add + commit)
 Gotcha: zsh shows aliases as `name='cmd'`, bash as `alias name='cmd'`
+
+## Man Pages
+What it is: the built-in manual for commands
+Commands:
+- `man grep` → open the manual
+- `/text` → search, `n` next, `N` previous, `q` quit
+- `Space` next page, `b` back, `G` end, `g` start
+Tip: search for the flag (`/-r`) or jump to `/EXAMPLES`
+Gotcha: macOS man pages are BSD versions and can differ from Linux
