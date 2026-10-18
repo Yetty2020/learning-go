@@ -21,7 +21,20 @@ func calcTip(bill, tipPercent float64)(float64, error){
 }
 
 func calcSplitBill(total float64, people int)(float64, error){
-	return 0, nil
+
+	if total <= 0{
+		return 0, errors.New("total must be greater than 0")
+	}
+	if people <=0{
+		return 0, errors.New("need at least 1 person to split the bill")
+	}
+
+	eachShare := total / float64(people)
+	
+
+
+
+	return eachShare, nil
 }
 
 func main(){
