@@ -24,15 +24,14 @@ func TestGetStatus(t *testing.T) {
 	}
 }
 
-func TestCalcUsage(t *testing.T){
-	tests := []struct{
-		plan float64
-		used float64
-		wantRemaining float64
+func TestCalcUsage(t *testing.T) {
+	tests := []struct {
+		plan           float64
+		used           float64
+		wantRemaining  float64
 		wantPercentage float64
-		wantError bool
-
-	} {
+		wantError      bool
+	}{
 		// normal usage
 		{10, 7.5, 2.5, 75, false},
 		{10, 0, 10, 0, false},
@@ -43,17 +42,15 @@ func TestCalcUsage(t *testing.T){
 
 		//invalid
 		{10, -2, 0, 0, true},
-		{0, 10, 0, 0 , true},
+		{0, 10, 0, 0, true},
 		{-2, 10, 0, 0, true},
 		{0, 0, 0, 0, true},
-			
-
 	}
 
 	for _, tc := range tests {
 		rem, perc, err := calcUsage(tc.plan, tc.used)
 		gotError := err != nil
-		if rem!= tc.wantRemaining || perc != tc.wantPercentage || gotError != tc.wantError{
+		if rem != tc.wantRemaining || perc != tc.wantPercentage || gotError != tc.wantError {
 			t.Errorf("calcUsage (%.1f, %.1f) = (%.1f, %.1f, %v), expected(%.1f, %.1f, %v)", tc.plan, tc.used, rem, perc, gotError, tc.wantRemaining, tc.wantPercentage, tc.wantError)
 		}
 	}
