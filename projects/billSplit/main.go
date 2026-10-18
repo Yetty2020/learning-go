@@ -20,6 +20,10 @@ func calcTip(bill, tipPercent float64)(float64, error){
 	return tipAmount, nil
 }
 
+func calcSplitBill(total float64, people int)(float64, error){
+	return 0, nil
+}
+
 func main(){
 
 }

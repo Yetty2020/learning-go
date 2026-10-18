@@ -1,8 +1,9 @@
 package main
 
 import (
-	
 	"testing"
+
+	
 )
 
 func TestCalcTip(t *testing.T){
@@ -47,13 +48,16 @@ func TestCalcTip(t *testing.T){
 
 }
 
-
-splitBill function
-{total, people, splittedbill}
-
-//normal case
-{10, 1, 10, false}
-{10, 2, 5, false}
+func TestSplitBill(t *testing.T){
+	tests := [] struct {
+		total float64
+		people int
+		splittedBill float64
+		wantError bool
+	}{
+		//normal case
+{10, 1, 10, false},
+{10, 2, 5, false},
 {13200, 4, 3300, false},
 
 // invalid people (good total)
@@ -68,4 +72,20 @@ splitBill function
 {0,  0,  0, true},
 {-1, 0,  0, true},
 {-1, -1, 0, true},
+
+	}
+
+	for _, tc := range tests{
+		splitBill, err := calcSplitBill(tc.total, tc.people)
+		gotError := err != nil
+		if tc.splittedBill != splitBill || tc.wantError != gotError{
+			t.Errorf("calcSplitBill(%.2f, %d) = (%.2f, %v), expected(%.2f, %v)", tc.total, tc.people, splitBill, gotError, tc.splittedBill, tc.wantError)
+		}
+	}
+}
+
+
+
+
+
 
