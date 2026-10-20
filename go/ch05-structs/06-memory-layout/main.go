@@ -11,4 +11,5 @@ type perms struct {
 	canSend         bool // 1 byte
 	canReceive      bool //1 byte
 	canManage bool //1 byte
+	// this sums up to 11 but Go rounds it up to 16
 }
