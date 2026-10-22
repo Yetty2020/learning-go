@@ -59,7 +59,7 @@ chmod -x file_name
 
 ## Changing ownership
 This is when you need sudo
-sudo  chown  -R   root   contacts
+sudo  chown  -R   root   contacts.  
 │     │      │    │      └── target
 │     │      │    └── new owner
 │     │      └── everything inside too
@@ -68,4 +68,9 @@ sudo  chown  -R   root   contacts
 
 The chown command, which stands for "change owner," allows you to change the owner of a file or directory, and it requires root privileges.
 
+This above prompt changes the ownership of the file from who it was to the root user.
+
 You can use this if you want only the root to have access to a file
+
+
+Basically, you only become root when you sudo before yotu command
