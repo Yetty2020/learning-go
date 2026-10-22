@@ -19,3 +19,37 @@ brew install neovim
 nvim --version
 
 This is to install neovim and check the version
+
+
+## Using Neovim
+
+To open an existing file
+nvim pathName
+
+When you open this, there are usually two modes: normal mode and insert mode.
+Normal mode is the default mode and this is used for commands.
+When you want to switch to insert mode, there are keys used to do this:
+Key	Enters Insert mode...
+i	before the cursor
+a	after the cursor
+o	on a new line below
+s	after deleting one character
+c (+ a motion)	after deleting some text
+
+How to tell which mode you’re in: look at the bottom-left of the screen.
+
+-- INSERT -- means Insert mode
+blank means Normal mode
+
+The safe reset: press Esc once or twice. That always puts you back in Normal mode.
+
+If you think a stray keypress changed the file: press Esc, type :q!, and press Enter. That quits without saving, so the file is untouched. Then open it again with the file path:
+
+Cheat sheet for this lesson
+
+i	go into Insert mode (start typing)
+Esc	back to Normal mode
+:w + Enter	write (save)
+:q + Enter	quit
+:wq + Enter	save and quit in one go
+:q! + Enter	quit without saving (the emergency exit if you mess up)
