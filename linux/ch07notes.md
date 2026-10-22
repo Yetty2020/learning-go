@@ -53,3 +53,19 @@ Esc	back to Normal mode
 :q + Enter	quit
 :wq + Enter	save and quit in one go
 :q! + Enter	quit without saving (the emergency exit if you mess up)
+
+
+## Webi
+Webi lets you install command line tools directly from the web, with no need for a traditional package manager like apt or brew.
+Why it’s useful:
+
+on a fresh machine or server that doesn’t have brew or apt yet
+it’s the same command on Mac and Linux
+it doesn’t need sudo, because it installs into your own ~/.local/bin
+
+sd is a nicer-looking ls. It does the same job, listing what’s in a folder, but adds:
+
+colours, so folders, files and programs each look different
+icons next to each file (if you install a special font)
+--tree, which shows folders inside folders as a tree diagram: allows you to view your files in a tree like structure.
+--classic: removes all the colors and icons from each file
