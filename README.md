@@ -6,7 +6,8 @@ Daily exercises and small projects carried out
 - [X] Chapter1_Variables
 - [X] Chapter2_Constants
 - [X] Chapter3_Conditions
-- [] Chapter4_Functions
+- [X] Chapter4_Functions
+- []  Chapter5_Structs
 
 
 ## Mini Tools
